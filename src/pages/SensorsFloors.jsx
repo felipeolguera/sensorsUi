@@ -7,7 +7,7 @@ import {
 
 import Map from "../Map";
 import Loader from "../Loader";
-import UiSensorsFloors from "../UiSensorsFloors";
+import UiSensorsFloors from "../ui/UiSensorsFloors";
 
 const Energy = () => {
   let gestureRecognizer = GestureRecognizer;

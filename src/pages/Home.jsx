@@ -5,7 +5,7 @@ import {
   DrawingUtils,
 } from "@mediapipe/tasks-vision";
 import Map from "../Map";
-import UiSensors from "../UiSensors";
+import UiSensors from "../ui/UiSensors";
 import Loader from "../Loader";
 
 const Home = () => {
