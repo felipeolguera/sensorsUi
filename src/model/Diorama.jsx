@@ -9,6 +9,7 @@ import { useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion-3d";
 
 import Building4 from "./Building4";
+import { Selection } from "@react-three/postprocessing";
 
 export default function Diorama({ landx, landz, gesture, noHand }) {
   const { nodes, materials } = useGLTF("/diorama06112024-transformed.glb");
@@ -30,8 +31,10 @@ export default function Diorama({ landx, landz, gesture, noHand }) {
           transition: { duration: 0.5, ease: "easeInOut", delay: 0.3 },
         }}
       >
-        <Building4 gesture={gesture} />
-
+        {" "}
+        <Selection>
+          <Building4 gesture={gesture} />
+        </Selection>
         <group
           position={[-23.652, 3.744, 179.988]}
           rotation={[0, -1.571, 0]}

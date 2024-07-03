@@ -48,7 +48,7 @@ function Map({ landx, landz, noHand, gesture }) {
         // maxZoom={811}
         // enablePan={true}
         autoRotate
-        autoRotateSpeed={0.1}
+        autoRotateSpeed={0.01}
       />
       <fog attach="fog" args={["black", 11, 1911]} />
       <Suspense fallback={<Loader />}>
@@ -79,7 +79,6 @@ function Map({ landx, landz, noHand, gesture }) {
 
         {/* <ModelOmantel4 landx={landx} landz={landz} gesture={gesture} noHand={noHand}/> */}
         {/* <DemoModel /> */}
-
         {/* <Siemen /> */}
         <EffectComposer disableNormalPass>
           <Bloom luminanceThreshold={0.5} mipmapBlur opacity={0.2} />
