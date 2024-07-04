@@ -29,16 +29,8 @@ function Map({ landx, landz, noHand, gesture }) {
 
   return (
     <Canvas dpr={[1, 2]} shadows gl={{ toneMappingExposure: 0.5 }}>
-      {/* <Stats /> */}
       <Preload all />
-      {/* <color   attach={"#000000"} /> */}
       <ambientLight intensity={0.3} />
-      {/* <spotLight
-        angle={1}
-        position={[30, 10, 0]}
-        intensity={0.6}
-        penumbra={0.4}
-      /> */}
 
       <OrbitControls
         minPolarAngle={Math.PI / 4}
@@ -64,12 +56,6 @@ function Map({ landx, landz, noHand, gesture }) {
           far={26100}
           fov={12}
         />
-        {/* <ModelOmantel5
-          landx={landx}
-          landz={landz}
-          gesture={gesture}
-          noHand={noHand}
-        /> */}
         <Diorama
           landx={landx}
           landz={landz}
@@ -77,21 +63,11 @@ function Map({ landx, landz, noHand, gesture }) {
           noHand={noHand}
         />
 
-        {/* <ModelOmantel4 landx={landx} landz={landz} gesture={gesture} noHand={noHand}/> */}
-        {/* <DemoModel /> */}
-        {/* <Siemen /> */}
         <EffectComposer disableNormalPass>
           <Bloom luminanceThreshold={0.5} mipmapBlur opacity={0.2} />
-          {/* <ToneMapping /> */}
         </EffectComposer>
 
-        <Environment
-          preset="forest"
-          // castShadow
-          // files="./small_sky.hdr"
-          // background
-          // ground={{ height: 35, radius: 200, scale: 0.1 }}
-        />
+        <Environment preset="forest" />
       </Suspense>
     </Canvas>
   );

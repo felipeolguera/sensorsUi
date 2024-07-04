@@ -107,6 +107,10 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
         <section className={`uileftsectionindex ${isVisible ? "active" : " "}`}>
           <div className="sectionbg" />
           <div className="sectionCardcontainerindex">
+            <div className="deviceDetails">
+              <h2>Device Name</h2> <br /> <h4>Device Location</h4>
+            </div>
+
             <div className="sectionItem">
               <SectionCardIndex
                 item={item}

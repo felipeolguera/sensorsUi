@@ -132,10 +132,15 @@ export default function Building4(props) {
     // setHidden(!hidden);
     navigate("/floor");
   };
-
+  const location = useLocation();
+  const initialState = location.pathname;
   useEffect(() => {
-    const homepageUrl = "http://localhost:5173/floor"; // Replace with your actual homepage URL
-    if (window.location.href === homepageUrl) {
+    // const homepageUrl = "http://localhost:5173/floor"; // Replace with your actual homepage URL
+    // if (window.location.href === homepageUrl) {
+    //   setHidden(!hidden);
+    // }
+
+    if (initialState === "/floor") {
       setHidden(!hidden);
     }
   }, []);
