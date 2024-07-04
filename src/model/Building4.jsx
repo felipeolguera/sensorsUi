@@ -8,7 +8,7 @@ import { Billboard, Html, useGLTF, useHelper } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { hover } from "@testing-library/user-event/dist/hover";
 import { motion } from "framer-motion-3d";
 import { color } from "framer-motion";
@@ -17,6 +17,7 @@ import { color } from "framer-motion";
 const Marker = ({ id, activeMarker, setActiveMarker, ...props }) => {
   const markerRef = useRef();
 
+  // marker animation
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     markerRef.current.rotation.y = THREE.MathUtils.lerp(
@@ -91,8 +92,11 @@ const Marker = ({ id, activeMarker, setActiveMarker, ...props }) => {
 
 const Lights = ({ markers }) => {
   const ref = useRef();
-  const [activeMarker, setActiveMarker] = useState(5);
+  // const [activeMarker, setActiveMarker] = useState(8);
 
+  const location = useLocation();
+  const initialState = location.pathname === "/" ? null : 8;
+  const [activeMarker, setActiveMarker] = useState(initialState);
   return (
     <>
       {markers.map(({ id, x, y, z, color, distance, decay, intensity }) => (

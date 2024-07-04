@@ -13,7 +13,7 @@ import { CloseSquareOutlined } from "@ant-design/icons";
 //   enableCam: () => void;
 // }
 
-const Energy = ({ enableCam, isGestureEnabled }) => {
+const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
   const handleClick = () => {
     enableCam();
   };
@@ -297,4 +297,4 @@ const Energy = ({ enableCam, isGestureEnabled }) => {
   );
 };
 
-export default Energy;
+export default UiSensorsFloors;

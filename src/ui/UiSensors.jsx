@@ -87,7 +87,7 @@ const UiSensors = () =>
     const navigate = useNavigate();
 
     const handleCalloutClick = () => {
-      navigate("/energy");
+      navigate("/floor");
     };
 
     const toHome = () => {
