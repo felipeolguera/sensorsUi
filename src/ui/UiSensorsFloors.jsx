@@ -50,9 +50,8 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 3,
         duration: 1,
-        delayChildren: 2,
+        delayChildren: 1,
         staggerChildren: 0.2,
         ease: "easeInOut",
       },
@@ -62,8 +61,8 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
       x: 100,
       transition: {
         duration: 0.3,
-        delayChildren: 0.6,
-        staggerChildren: 0.2,
+        // delayChildren: 0.6,
+        // staggerChildren: 0.2,
         ease: "easeInOut",
       },
     },
@@ -207,7 +206,7 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
                   width: "100%",
                 }}
               >
-                <div className="top__bar">
+                <motion.div className="top__bar" variants={item}>
                   <div
                     className={`top__menu ${
                       activeMenu === "DAY" ? "active" : ""
@@ -242,7 +241,7 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
                       }}
                     />
                   </div>
-                </div>
+                </motion.div>
 
                 <div className="sectionItem__charts">
                   <SectionCard__charts
