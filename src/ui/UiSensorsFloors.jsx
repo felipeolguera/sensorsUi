@@ -24,7 +24,7 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 1,
+        delay: 3,
         duration: 1,
         delayChildren: 2,
         staggerChildren: 0.2,
@@ -50,8 +50,9 @@ const UiSensorsFloors = ({ enableCam, isGestureEnabled }) => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.3,
-        delayChildren: 0.6,
+        delay: 3,
+        duration: 1,
+        delayChildren: 2,
         staggerChildren: 0.2,
         ease: "easeInOut",
       },

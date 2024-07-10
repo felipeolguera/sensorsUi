@@ -19,12 +19,13 @@ export default function Diorama({ landx, landz, gesture, noHand }) {
         dispose={null}
         // scale={12}
         position={[0, -30, 1]}
-        initial={{ rotateX: 0, scale: 0 }}
+        initial={{ rotateX: 0, scale: 0, opacity: 0 }}
         animate={{
+          opacity: 1,
           scale: Math.max(0.8, noHand ? 0.8 : -landz / 7),
           rotateY: -landx,
         }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 2, ease: "easeOut" }}
         exit={{
           scale: 0,
           transition: { duration: 0.5, ease: "easeInOut", delay: 0.3 },

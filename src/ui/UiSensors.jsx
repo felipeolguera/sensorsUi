@@ -26,7 +26,7 @@ const UiSensors = () =>
         opacity: 1,
         x: 0,
         transition: {
-          delay: 1,
+          delay: 2,
           duration: 1,
           delayChildren: 2,
           staggerChildren: 0.2,
@@ -52,7 +52,7 @@ const UiSensors = () =>
         opacity: 1,
         x: 0,
         transition: {
-          delay: 1,
+          delay: 2,
           duration: 1,
           delayChildren: 2,
           staggerChildren: 0.2,

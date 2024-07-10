@@ -318,19 +318,18 @@ canvas {
   padding: 0;
 }
 
-.deviceDetails h2,
-h4 {
+.deviceDetails h2 {
   margin: 0;
   padding: 0;
   padding-left: 8px;
+  background: hsla(180, 36%, 9%, 0.3);
+  width: 368px;
 }
 
 .deviceDetails h4 {
   margin-top: -1rem;
   padding-left: 8px;
   color: #c2c2c2;
-  background: hsla(180, 36%, 9%, 0.5);
-  width: 368px;
 }
 
 .sectionItem {
